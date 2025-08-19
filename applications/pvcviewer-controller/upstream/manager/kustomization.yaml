@@ -1,2 +1,10 @@
 resources:
 - manager.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+configMapGenerator:
+- name: config
+  envs:
+  - params.env

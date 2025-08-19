@@ -9,6 +9,10 @@ configMapGenerator:
   - TENSORBOARD_IMAGE=tensorflow/tensorflow:2.5.1
   - ISTIO_GATEWAY=kubeflow/kubeflow-gateway
   - ISTIO_HOST=*
+  - USE_ISTIO=true
+  - USE_GATEWAY_API=false
+  - K8S_GATEWAY_NAME=kubeflow-gateway
+  - K8S_GATEWAY_NAMESPACE=kubeflow
 patchesStrategicMerge:
 - patches/add_controller_config.yaml
 images:

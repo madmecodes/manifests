@@ -30,11 +30,26 @@ spec:
               configMapKeyRef:
                 name: config
                 key: USE_ISTIO
+          - name: USE_GATEWAY_API
+            valueFrom:
+              configMapKeyRef:
+                name: config
+                key: USE_GATEWAY_API
           - name: ISTIO_GATEWAY
             valueFrom:
               configMapKeyRef:
                 name: config
                 key: ISTIO_GATEWAY
+          - name: K8S_GATEWAY_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: config
+                key: K8S_GATEWAY_NAME
+          - name: K8S_GATEWAY_NAMESPACE
+            valueFrom:
+              configMapKeyRef:
+                name: config
+                key: K8S_GATEWAY_NAMESPACE
           - name: ISTIO_HOST
             valueFrom:
               configMapKeyRef:
